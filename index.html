@@ -52,8 +52,8 @@
 
   <img src="comparison.png" class="bg">
 
-  <audio id="prAudio" src="personarealis.mp3"></audio>
-  <audio id="elAudio" src="elevenlabs.mp3"></audio>
+<audio id="prAudio" preload="auto" src="personarealis.mp3"></audio>
+<audio id="elAudio" preload="auto" src="elevenlabs.mp3"></audio>
 
   <div class="prButton" onclick="playPR()"></div>
 
@@ -62,33 +62,28 @@
 </div>
   
 <script>
-
 const prAudio = document.getElementById('prAudio');
 const elAudio = document.getElementById('elAudio');
 
 function playPR(){
-
   elAudio.pause();
   elAudio.currentTime = 0;
 
   prAudio.pause();
   prAudio.currentTime = 0;
-
+  prAudio.load();
   prAudio.play();
 }
 
 function playEL(){
-
   prAudio.pause();
   prAudio.currentTime = 0;
 
   elAudio.pause();
   elAudio.currentTime = 0;
-
+  elAudio.load();
   elAudio.play();
 }
-
 </script>
-
 </body>
 </html>
