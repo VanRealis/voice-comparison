@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voice Comparison</title>
+
+  <style>
+
+    body{
+      margin:0;
+      background:black;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      font-family:Arial;
+    }
+
+    .container{
+      position:relative;
+      width:100%;
+      max-width:1000px;
+    }
+
+    .bg{
+      width:100%;
+      display:block;
+    }
+
+    .prButton{
+      position:absolute;
+      left:6%;
+      top:33.5%;
+      width:39%;
+      height:14%;
+      cursor:pointer;
+    }
+
+    .elButton{
+      position:absolute;
+      left:53%;
+      top:33.5%;
+      width:39%;
+      height:14%;
+      cursor:pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <img src="comparison.png" class="bg">
+
+  <audio id="prAudio" src="personarealis.mp3"></audio>
+  <audio id="elAudio" src="elevenlabs.mp3"></audio>
+
+  <div class="prButton"
+       onclick="document.getElementById('prAudio').play()">
+  </div>
+
+  <div class="elButton"
+       onclick="document.getElementById('elAudio').play()">
+  </div>
+
+</div>
+
+</body>
+</html>
