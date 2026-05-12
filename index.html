@@ -4,35 +4,6 @@
   <title>Voice Comparison</title>
 
   <style>
-<script>
-
-const prAudio = document.getElementById('prAudio');
-const elAudio = document.getElementById('elAudio');
-
-function playPR(){
-
-  elAudio.pause();
-  elAudio.currentTime = 0;
-
-  prAudio.pause();
-  prAudio.currentTime = 0;
-
-  prAudio.play();
-}
-
-function playEL(){
-
-  prAudio.pause();
-  prAudio.currentTime = 0;
-
-  elAudio.pause();
-  elAudio.currentTime = 0;
-
-  elAudio.play();
-}
-
-</script>
-    
     body{
       margin:0;
       background:black;
@@ -89,6 +60,35 @@ function playEL(){
 <div class="elButton" onclick="playEL()"></div>
 
 </div>
+  
+<script>
+
+const prAudio = document.getElementById('prAudio');
+const elAudio = document.getElementById('elAudio');
+
+function playPR(){
+
+  elAudio.pause();
+  elAudio.currentTime = 0;
+
+  prAudio.pause();
+  prAudio.currentTime = 0;
+
+  prAudio.play();
+}
+
+function playEL(){
+
+  prAudio.pause();
+  prAudio.currentTime = 0;
+
+  elAudio.pause();
+  elAudio.currentTime = 0;
+
+  elAudio.play();
+}
+
+</script>
 
 </body>
 </html>
