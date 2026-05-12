@@ -4,35 +4,7 @@
   <title>Voice Comparison</title>
 
   <style>
-<script>
 
-const prAudio = document.getElementById('prAudio');
-const elAudio = document.getElementById('elAudio');
-
-function playPR(){
-
-  elAudio.pause();
-  elAudio.currentTime = 0;
-
-  prAudio.pause();
-  prAudio.currentTime = 0;
-
-  prAudio.play();
-}
-
-function playEL(){
-
-  prAudio.pause();
-  prAudio.currentTime = 0;
-
-  elAudio.pause();
-  elAudio.currentTime = 0;
-
-  elAudio.play();
-}
-
-</script>
-    
     body{
       margin:0;
       background:black;
@@ -54,43 +26,24 @@ function playEL(){
       display:block;
     }
 
-.prButton{
-  position:absolute;
-  left:6.8%;
-  top:30.7%;
-  width:31.8%;
-  height:6.8%;
-  cursor:pointer;
+    .prButton{
+      position:absolute;
+      left:6%;
+      top:33.5%;
+      width:39%;
+      height:14%;
+      cursor:pointer;
+    }
 
-  border:2px solid rgba(0,255,140,0.7);
-  border-radius:16px;
+    .elButton{
+      position:absolute;
+      left:53%;
+      top:33.5%;
+      width:39%;
+      height:14%;
+      cursor:pointer;
+    }
 
-  background:rgba(0,255,140,0.06);
-
-  box-shadow:
-    0 0 16px rgba(0,255,140,0.45);
-
-  transition:all 0.2s ease;
-}
-
-.elButton{
-  position:absolute;
-  left:52.8%;
-  top:30.7%;
-  width:31.8%;
-  height:6.8%;
-  cursor:pointer;
-
-  border:2px solid rgba(255,140,0,0.55);
-  border-radius:16px;
-
-  background:rgba(255,140,0,0.04);
-
-  box-shadow:
-    0 0 16px rgba(255,140,0,0.30);
-
-  transition:all 0.2s ease;
-}
   </style>
 </head>
 
@@ -103,9 +56,13 @@ function playEL(){
   <audio id="prAudio" src="personarealis.mp3"></audio>
   <audio id="elAudio" src="elevenlabs.mp3"></audio>
 
-  <div class="prButton" onclick="playPR()"></div>
+  <div class="prButton"
+       onclick="document.getElementById('prAudio').play()">
+  </div>
 
-<div class="elButton" onclick="playEL()"></div>
+  <div class="elButton"
+       onclick="document.getElementById('elAudio').play()">
+  </div>
 
 </div>
 
